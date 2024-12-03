@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="carte, lycee, la providence, amiens, bts, bts ciel">
+    <meta name="description" content="Carte interactive de La Providence">
+
+    <title>Plan interactif</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="myInit();">
+    <div id="section-map">
+        <canvas id='myCanvas'></canvas>
+        <img alt="map" id="map" src="map.png" usemap="#map-mapping">
+
+        <map name="map-mapping">
+            <area target="_blank" onmouseover='myHover(this);' onmouseout='myLeave();' alt="Preau" title="Preau"
+                href="#1" coords="280,218,312,217,312,297,280,297" shape="poly">
+        </map>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
