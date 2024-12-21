@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -6,23 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="carte, lycee, la providence, amiens, bts, bts ciel">
     <meta name="description" content="Carte interactive de La Providence">
-
     <title>Plan interactif</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body onload="myInit();">
+    <div id="header">
+        <h1>Carte Interactive de La Providence</h1>
+    </div>
     <div id="section-map">
         <canvas id='myCanvas'></canvas>
-        <img alt="map" id="map" src="map.png" usemap="#map-mapping">
-
-        <map name="map-mapping">
-            <area target="_blank" onmouseover='myHover(this);' onmouseout='myLeave();' alt="Preau" title="Preau"
-                href="#1" coords="280,218,312,217,312,297,280,297" shape="poly">
+        <img alt="map" id="map" src="map.png" usemap="#image-map">
+        <map name="image-map">
+            <area target="_blank" onmouseover='myHover(this);' onmouseout='myLeave();' alt="Internat 1" title="Internat 1" href="#1" coords="384,160,519,130" shape="rect">
+            <area target="_blank" onmouseover='myHover(this);' onmouseout='myLeave();' alt="Internat 2" title="Internat 2" href="#2" coords="610,43,518,44,519,132,543,132,542,68,611,66" shape="poly">
         </map>
     </div>
-
+    <div id="language-selector">
+        <button onclick="changeLanguage('fr')">Français</button>
+        <button onclick="changeLanguage('en')">English</button>
+    </div>
     <script src="script.js"></script>
 </body>
 

@@ -1,20 +1,12 @@
 // stores the device context of the canvas we use to draw the outlines
-// initialized in myInit, used in myHover and myLeave
 var convaContext;
+var translations = {};
 
 // shorthand func
 function byId(e) { return document.getElementById(e); }
 
 // takes a string that contains coords eg - "227,307,261,309, 339,354, 328,371, 240,331"
 // draws a line from each co-ord pair to the next - assumes starting point needs to be repeated as ending point.
-function drawCircle(coOrdStr) {
-    const mCoords = coOrdStr.split(',');
-
-    convaContext.beginPath();
-    convaContext.arc(mCoords[0], mCoords[1], mCoords[2], 0, 2 * Math.PI);
-    convaContext.stroke();
-}
-
 function drawPoly(coOrdStr) {
     const mCoords = coOrdStr.split(',');
 
@@ -98,4 +90,20 @@ function myInit() {
     convaContext.fillStyle = 'red';
     convaContext.strokeStyle = 'red';
     convaContext.lineWidth = 2;
+
+    // Load translations
+    fetch('translations.json')
+        .then(response => response.json())
+        .then(data => {
+            translations = data;
+            changeLanguage('fr'); // Default language
+        });
+}
+
+function changeLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.title = translations[lang].title;
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        element.textContent = translations[lang][element.getAttribute('data-translate')];
+    });
 }
