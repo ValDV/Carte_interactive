@@ -1,12 +1,22 @@
 {
     "fr": {
-        "title": "Plan interactif",
-        "internat1": "Internat 1",
-        "internat2": "Internat 2"
+        "internat1": {
+            "title": "Internat 1",
+            "description": "Au deuxième étage : secteur BTS. Au troisième étage : filles (collège et lycée)."
+        },
+        "internat2": {
+            "title": "Internat 2",
+            "description": "Au premier étage (au-dessus de la cantine) : garçons (collège et lycée)."
+        }
     },
     "en": {
-        "title": "Interactive Map",
-        "internat1": "Dormitory 1",
-        "internat2": "Dormitory 2"
+        "internat1": {
+            "title": "Dormitory 1",
+            "description": "On the second floor: BTS sector. On the third floor: girls (middle and high school)."
+        },
+        "internat2": {
+            "title": "Dormitory 2",
+            "description": "On the first floor (above the canteen): boys (middle and high school)."
+        }
     }
 }

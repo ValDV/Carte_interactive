@@ -2,11 +2,8 @@
 var convaContext;
 var translations = {};
 
-// shorthand func
 function byId(e) { return document.getElementById(e); }
 
-// takes a string that contains coords eg - "227,307,261,309, 339,354, 328,371, 240,331"
-// draws a line from each co-ord pair to the next - assumes starting point needs to be repeated as ending point.
 function drawPoly(coOrdStr) {
     const mCoords = coOrdStr.split(',');
 
@@ -96,7 +93,7 @@ function myInit() {
         .then(response => response.json())
         .then(data => {
             translations = data;
-            changeLanguage('fr'); // Default language
+            changeLanguage('fr');
         });
 }
 
@@ -107,3 +104,29 @@ function changeLanguage(lang) {
         element.textContent = translations[lang][element.getAttribute('data-translate')];
     });
 }
+
+// Affiche la modale
+function showModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'block';
+    }
+}
+
+// Ferme la modale
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Ferme la modale lorsqu'on clique en dehors
+window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+};
