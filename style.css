@@ -107,6 +107,8 @@ body {
     top: 20px; /* Positionner en haut de la page */
     left: 50%;
     transform: translateX(-50%); /* Centrer horizontalement */
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .close {
@@ -127,4 +129,30 @@ body {
     max-width: 100%;
     height: auto;
     margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Styles pour les titres et paragraphes dans les modales */
+.modal-content h2 {
+    color: #0073e6;
+    border-bottom: 2px solid #0073e6;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-content h3 {
+    color: #005bb5;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #005bb5;
+    padding-bottom: 5px;
+}
+
+.modal-content p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.modal-content strong {
+    color: #333;
 }

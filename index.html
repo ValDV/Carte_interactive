@@ -19,8 +19,8 @@
         <canvas id='myCanvas'></canvas>
         <img alt="map" id="map" src="map.png" usemap="#image-map">
         <map name="image-map">
-            <area onmouseover="myHover(this);" onmouseout="myLeave();" alt="Internat 1" title="Internat 1" href="javascript:void(0);" onclick="showModal('modal-internat1');" coords="384,160,519,130" shape="rect">
-            <area onmouseover="myHover(this);" onmouseout="myLeave();" alt="Internat 2" title="Internat 2" href="javascript:void(0);" onclick="showModal('modal-internat2');" coords="610,43,518,44,519,132,543,132,542,68,611,66" shape="poly">
+            <area onmouseover="myHover(this);" onmouseout="myLeave();" alt="Internat 1" title="Internat 1" href="javascript:void(0);" onclick="showModal('modal-internat1');" coords="610,43,518,44,519,132,543,132,542,68,611,66" shape="poly">
+            <area onmouseover="myHover(this);" onmouseout="myLeave();" alt="Internat 2" title="Internat 2" href="javascript:void(0);" onclick="showModal('modal-internat2');" coords="384,160,519,130" shape="rect">
         </map>
     </div>
     <div id="language-selector">
@@ -30,19 +30,43 @@
     <div id="modal-internat1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-internat1')">&times;</span>
-            <h2 data-translate="internat1.title">Internat 1</h2>
-            <p data-translate="internat1.description">Au deuxième étage : secteur BTS. Au troisième étage : filles (collège et lycée).</p>
-            <img src="internat1_etage2.jpg" alt="Secteur BTS" class="modal-image">
-            <img src="internat1_etage3.jpg" alt="Secteur filles" class="modal-image">
+            <h2>Internat 1</h2>
+            <p>Secteur 100 collégiens et lycéens garçons</p>
+            <h3>Fonctionnement de l'Internat</h3>
+            <p><strong>Ouverture de l'internat :</strong> 5h45</p>
+            <p><strong>Réveil des collégiens :</strong> 6h30</p>
+            <p><strong>Rassemblement à la cantine :</strong> 7h00</p>
+            <p><strong>Préparation pour la journée :</strong> 7h30</p>
+            <p><strong>Départ de l'internat :</strong> 7h45</p>
+            <p><strong>Pointage et goûter :</strong> 17h45</p>
+            <p><strong>Étude en chambre ou en salle :</strong> 18h15 - 19h15</p>
+            <p><strong>Cantine :</strong></p>
+            <p>Collège : 19h15</p>
+            <p>Lycée : 19h30</p>
+            <p><strong>Retour à l'internat pour les collégiens :</strong> 20h00</p>
+            <p><strong>Ramassage des téléphones des collégiens :</strong> 21h15</p>
+            <p><strong>Coucher pour les collégiens :</strong> 21h30</p>
+            <h3>Activités sportives et loisirs :</h3>
+            <p><strong>Piscine (pour les collégiens) :</strong> Mardi</p>
+            <p><strong>Activités sportives :</strong> Football et basketball le lundi soir</p>
+            <p><strong>Foyer :</strong> Mercredi après-midi</p>
+            <p><strong>Sorties supplémentaires :</strong> (ex : match de hockey, sortie au marché de Noël)</p>
         </div>
     </div>
-
     <div id="modal-internat2" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-internat2')">&times;</span>
-            <h2 data-translate="internat2.title">Internat 2</h2>
-            <p data-translate="internat2.description">Au premier étage (au-dessus de la cantine) : garçons (collège et lycée).</p>
-            <img src="internat2_etage1.jpg" alt="Secteur garçons" class="modal-image">
+            <h2>Internat 2</h2>
+            <h3>Au Deuxième Étage : Secteur des BTS</h3>
+            <p><strong>Cantine matin :</strong> 6h45 à 7h45</p>
+            <p><strong>Cantine soir :</strong> 19h00 à 20h00</p>
+            <p><strong>Sorties autorisées :</strong> Jusqu'à 22h15</p>
+            <p><strong>Chambres :</strong> Chaque chambre est partagée par deux étudiants, avec une armoire et un bureau attribués à chaque personne</p>
+            <p><strong>Commodités :</strong> Un lavabo par chambre, ainsi que trois toilettes individuelles réparties dans le secteur</p>
+            <p><strong>Douches :</strong> Douches collectives</p>
+            <p><strong>Salle de repos :</strong> Équipée d'un canapé et d'une télévision</p>
+            <h3>Au Troisième Étage : Secteur des Filles (Collège et Lycée)</h3>
+            <p><strong>Organisation :</strong> Fonctionnement similaire à celui du secteur des garçons</p>
         </div>
     </div>
 
