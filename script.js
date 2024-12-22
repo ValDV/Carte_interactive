@@ -93,7 +93,7 @@ function myInit() {
         .then(response => response.json())
         .then(data => {
             translations = data;
-            changeLanguage('fr');
+            changeLanguage('fr'); // Default language
         });
 }
 
@@ -101,7 +101,8 @@ function changeLanguage(lang) {
     document.documentElement.lang = lang;
     document.title = translations[lang].title;
     document.querySelectorAll('[data-translate]').forEach(element => {
-        element.textContent = translations[lang][element.getAttribute('data-translate')];
+        const key = element.getAttribute('data-translate');
+        element.textContent = translations[lang][key];
     });
 }
 

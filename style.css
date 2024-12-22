@@ -97,12 +97,16 @@ body {
 
 .modal-content {
     background-color: white;
-    margin: 10% auto;
+    margin: 20px auto; /* Ajusté pour positionner en haut */
     padding: 20px;
     border: 1px solid #888;
     width: 60%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Ajouté pour un meilleur contrôle de la position */
+    top: 20px; /* Positionner en haut de la page */
+    left: 50%;
+    transform: translateX(-50%); /* Centrer horizontalement */
 }
 
 .close {

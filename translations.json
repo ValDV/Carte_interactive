@@ -1,5 +1,11 @@
 {
     "fr": {
+        "title": "Plan interactif",
+        "header": "Carte Interactive de La Providence",
+        "languageSelector": {
+            "fr": "Français",
+            "en": "Anglais"
+        },
         "internat1": {
             "title": "Internat 1",
             "description": "Au deuxième étage : secteur BTS. Au troisième étage : filles (collège et lycée)."
@@ -10,6 +16,12 @@
         }
     },
     "en": {
+        "title": "Interactive Map",
+        "header": "Interactive Map of La Providence",
+        "languageSelector": {
+            "fr": "French",
+            "en": "English"
+        },
         "internat1": {
             "title": "Dormitory 1",
             "description": "On the second floor: BTS sector. On the third floor: girls (middle and high school)."

@@ -19,8 +19,8 @@
         <canvas id='myCanvas'></canvas>
         <img alt="map" id="map" src="map.png" usemap="#image-map">
         <map name="image-map">
-            <area target="_blank" onmouseover="myHover(this);" onmouseout="myLeave();" alt="Internat 1" title="Internat 1" href="javascript:void(0);" onclick="showModal('modal-internat1');" coords="384,160,519,130" shape="rect">
-            <area target="_blank" onmouseover="myHover(this);" onmouseout="myLeave();" alt="Internat 2" title="Internat 2" href="javascript:void(0);" onclick="showModal('modal-internat2');" coords="610,43,518,44,519,132,543,132,542,68,611,66" shape="poly">
+            <area onmouseover="myHover(this);" onmouseout="myLeave();" alt="Internat 1" title="Internat 1" href="javascript:void(0);" onclick="showModal('modal-internat1');" coords="384,160,519,130" shape="rect">
+            <area onmouseover="myHover(this);" onmouseout="myLeave();" alt="Internat 2" title="Internat 2" href="javascript:void(0);" onclick="showModal('modal-internat2');" coords="610,43,518,44,519,132,543,132,542,68,611,66" shape="poly">
         </map>
     </div>
     <div id="language-selector">
@@ -30,23 +30,22 @@
     <div id="modal-internat1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-internat1')">&times;</span>
-            <h2>Internat 1</h2>
-            <p>Au deuxième étage : secteur des BTS.</p>
-            <p>Au troisième étage : secteur des filles (collège et lycée).</p>
+            <h2 data-translate="internat1.title">Internat 1</h2>
+            <p data-translate="internat1.description">Au deuxième étage : secteur BTS. Au troisième étage : filles (collège et lycée).</p>
             <img src="internat1_etage2.jpg" alt="Secteur BTS" class="modal-image">
             <img src="internat1_etage3.jpg" alt="Secteur filles" class="modal-image">
         </div>
     </div>
-    
+
     <div id="modal-internat2" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-internat2')">&times;</span>
-            <h2>Internat 2</h2>
-            <p>Au premier étage, au-dessus de la cantine : secteur des garçons (collège et lycée).</p>
+            <h2 data-translate="internat2.title">Internat 2</h2>
+            <p data-translate="internat2.description">Au premier étage (au-dessus de la cantine) : garçons (collège et lycée).</p>
             <img src="internat2_etage1.jpg" alt="Secteur garçons" class="modal-image">
         </div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 
