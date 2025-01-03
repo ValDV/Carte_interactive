@@ -1,5 +1,10 @@
-// stores the device context of the canvas we use to draw the outlines
 var convaContext;
+var translations = {};
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded and parsed');
+    myInit();
+});
 
 function byId(e) { return document.getElementById(e); }
 
@@ -54,69 +59,43 @@ function myLeave() {
 }
 
 function myInit() {
-    // get the target image
     const img = byId('map');
 
-    // get it's position and width+height
     const x = img.offsetLeft;
     const y = img.offsetTop;
     const w = img.clientWidth;
     const h = img.clientHeight;
 
-    // move the canvas, so it's contained by the same parent as the image
     const imgParent = img.parentNode;
     const canva = byId('myCanvas');
     imgParent.appendChild(canva);
 
-    // place the canvas in front of the image
     canva.style.zIndex = 1;
 
-    // position it over the image
     canva.style.left = x + 'px';
     canva.style.top = y + 'px';
 
-    // make same size as the image
     canva.setAttribute('width', w + 'px');
     canva.setAttribute('height', h + 'px');
 
-    // get it's context
     convaContext = canva.getContext('2d');
 
-    // set the 'default' values for the colour/width of fill/stroke operations
     convaContext.fillStyle = 'red';
     convaContext.strokeStyle = 'red';
     convaContext.lineWidth = 2;
 
-    // Set default language
-    changeLanguage('fr');
-
-    // Initialize Slick Carousel
-    $('.carousel').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
+    fetch('translations.json')
+        .then(response => response.json())
+        .then(data => {
+            translations = data;
+            console.log('Translations loaded:', translations);
+            changeLanguage('fr');
+        })
+        .catch(error => console.error('Error loading translations:', error));
 }
 
 function changeLanguage(lang) {
+    console.log('Changing language to:', lang);
     document.documentElement.lang = lang;
     document.title = translations[lang].title;
     document.querySelectorAll('[data-translate]').forEach(element => {
@@ -128,11 +107,17 @@ function changeLanguage(lang) {
         element.textContent = translation;
     });
 
-    // Update area titles
     document.querySelectorAll('map area').forEach(area => {
         const key = area.getAttribute('alt').toLowerCase().replace(' ', '');
         area.setAttribute('title', translations[lang][key].title);
     });
+
+    for (let i = 0; i < translations[lang].internat2.illustrations.length; i++) {
+        const illustration = document.getElementById(`illustration${i + 1}`);
+        if (illustration) {
+            illustration.querySelector('p').textContent = translations[lang].internat2.illustrations[i].alt;
+        }
+    }
 }
 
 // Affiche la modale
@@ -140,6 +125,29 @@ function showModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.style.display = 'block';
+        $('.carousel').not('.slick-initialized').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
     }
 }
 

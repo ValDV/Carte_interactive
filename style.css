@@ -84,7 +84,7 @@ body {
 
 /* Styles pour les modales */
 .modal {
-    display: none; /* Cacher par défaut */
+    display: none;
     position: fixed;
     z-index: 100;
     left: 0;
@@ -97,16 +97,16 @@ body {
 
 .modal-content {
     background-color: white;
-    margin: 20px auto; /* Ajusté pour positionner en haut */
+    margin: 20px auto;
     padding: 20px;
     border: 1px solid #888;
     width: 60%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: absolute; /* Ajouté pour un meilleur contrôle de la position */
-    top: 20px; /* Positionner en haut de la page */
+    position: absolute;
+    top: 20px;
     left: 50%;
-    transform: translateX(-50%); /* Centrer horizontalement */
+    transform: translateX(-50%);
     max-height: 80vh;
     overflow-y: auto;
 }
@@ -138,6 +138,7 @@ body {
     border-bottom: 2px solid #0073e6;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    font-weight: normal;
 }
 
 .modal-content h3 {
@@ -146,15 +147,18 @@ body {
     margin-bottom: 10px;
     border-bottom: 1px solid #005bb5;
     padding-bottom: 5px;
+    font-weight: normal;
 }
 
 .modal-content p {
     margin: 10px 0;
     line-height: 1.6;
+    font-weight: normal;
 }
 
 .modal-content strong {
     color: #333;
+    font-weight: bold;
 }
 
 /* Styles pour le carrousel */

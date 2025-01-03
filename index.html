@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="carte, lycee, la providence, amiens, bts, bts ciel">
     <meta name="description" content="Carte interactive de La Providence">
-    <title>Plan interactif</title>
+    <title data-translate="title">Plan interactif</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
@@ -15,7 +15,7 @@
 
 <body onload="myInit();">
     <div id="header">
-        <h1>Carte Interactive de La Providence</h1>
+        <h1 data-translate="header">Carte Interactive de La Providence</h1>
     </div>
     <div id="section-map">
         <canvas id='myCanvas'></canvas>
@@ -26,60 +26,61 @@
         </map>
     </div>
     <div id="language-selector">
-        <button onclick="changeLanguage('fr')">Français</button>
-        <button onclick="changeLanguage('en')">Anglais</button>
+        <button onclick="changeLanguage('fr')" data-translate="languageSelector.fr">Français</button>
+        <button onclick="changeLanguage('en')" data-translate="languageSelector.en">Anglais</button>
     </div>
     <div id="modal-internat1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-internat1')">&times;</span>
-            <h2>Internat 1</h2>
-            <p>Secteur 100 collégiens et lycéens garçons</p>
-            <h3>Fonctionnement de l'Internat</h3>
-            <p><strong>Ouverture de l'internat :</strong> 5h45</p>
-            <p><strong>Réveil des collégiens :</strong> 6h30</p>
-            <p><strong>Rassemblement à la cantine :</strong> 7h00</p>
-            <p><strong>Préparation pour la journée :</strong> 7h30</p>
-            <p><strong>Départ de l'internat :</strong> 7h45</p>
-            <p><strong>Pointage et goûter :</strong> 17h45</p>
-            <p><strong>Étude en chambre ou en salle :</strong> 18h15 - 19h15</p>
-            <p><strong>Cantine :</strong></p>
-            <p>Collège : 19h15</p>
-            <p>Lycée : 19h30</p>
-            <p><strong>Retour à l'internat pour les collégiens :</strong> 20h00</p>
-            <p><strong>Ramassage des téléphones des collégiens :</strong> 21h15</p>
-            <p><strong>Coucher pour les collégiens :</strong> 21h30</p>
-            <h3>Activités sportives et loisirs :</h3>
-            <p><strong>Piscine (pour les collégiens) :</strong> Mardi</p>
-            <p><strong>Activités sportives :</strong> Football et basketball le lundi soir</p>
-            <p><strong>Foyer :</strong> Mercredi après-midi</p>
-            <p><strong>Sorties supplémentaires :</strong> (ex : match de hockey, sortie au marché de Noël)</p>
+            <h2 data-translate="internat1.title">Internat 1</h2>
+            <p data-translate="internat1.description"></p>
+            <h3 data-translate="functionnement">Fonctionnement de l'Internat</h3>
+            <p><strong data-translate="internat1.functionnement.ouverture"></strong></p>
+            <p><strong data-translate="internat1.functionnement.reveil"></strong></p>
+            <p><strong data-translate="internat1.functionnement.rassemblement"></strong></p>
+            <p><strong data-translate="internat1.functionnement.preparation"></strong></p>
+            <p><strong data-translate="internat1.functionnement.depart"></strong></p>
+            <p><strong data-translate="internat1.functionnement.pointage"></strong></p>
+            <p><strong data-translate="internat1.functionnement.etude"></strong></p>
+            <p><strong data-translate="cantine"></strong></p>
+            <p data-translate="internat1.functionnement.cantine_college"></p>
+            <p data-translate="internat1.functionnement.cantine_lycee"></p>
+            <p><strong data-translate="internat1.functionnement.retour"></strong></p>
+            <p><strong data-translate="internat1.functionnement.ramassage"></strong></p>
+            <p><strong data-translate="internat1.functionnement.coucher"></strong></p>
+            <h3 data-translate="activites">Activités sportives et loisirs :</h3>
+            <p><strong data-translate="internat1.activites.piscine"></strong></p>
+            <p><strong data-translate="internat1.activites.sportives"></strong></p>
+            <p><strong data-translate="internat1.activites.foyer"></strong></p>
+            <p><strong data-translate="internat1.activites.sorties"></strong></p>
         </div>
     </div>
     <div id="modal-internat2" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal-internat2')">&times;</span>
-            <h2>Internat 2</h2>
-            <h3>Au Deuxième Étage : Secteur des BTS</h3>
-            <p><strong>Cantine matin :</strong> 6h45 à 7h45</p>
-            <p><strong>Cantine soir :</strong> 19h00 à 20h00</p>
-            <p><strong>Sorties autorisées :</strong> Jusqu'à 22h15</p>
-            <p><strong>Chambres :</strong> Chaque chambre est partagée par deux étudiants, avec une armoire et un bureau attribués à chaque personne.</p>
-            <p><strong>Commodités :</strong> Un lavabo par chambre, ainsi que trois toilettes individuelles réparties dans le secteur.</p>
-            <p><strong>Douches :</strong> Douches collectives disponibles.</p>
-            <p><strong>Salle de repos :</strong> Équipée d'un canapé et d'une télévision pour les moments de détente.</p>
-            <h3>Au Troisième Étage : Secteur des Filles (Collège et Lycée)</h3>
-            <p><strong>Organisation :</strong> Fonctionnement similaire à celui du secteur des garçons, avec une gestion des espaces et des services adaptée aux besoins des filles.</p>
-            <h3>Illustration du secteur BTS</h3>
+            <h2 data-translate="internat2.title">Internat 2</h2>
+            <p data-translate="internat2.description"></p>
+            <h3 data-translate="bts">Au Deuxième Étage : Secteur des BTS</h3>
+            <p><strong data-translate="internat2.bts.cantine_matin"></strong></p>
+            <p><strong data-translate="internat2.bts.cantine_soir"></strong></p>
+            <p><strong data-translate="internat2.bts.sorties"></strong></p>
+            <p><strong data-translate="internat2.bts.chambres"></strong></p>
+            <p><strong data-translate="internat2.bts.commodites"></strong></p>
+            <p><strong data-translate="internat2.bts.douches"></strong></p>
+            <p><strong data-translate="internat2.bts.salle_repos"></strong></p>
+            <h3 data-translate="filles">Au Troisième Étage : Secteur des Filles (Collège et Lycée)</h3>
+            <p><strong data-translate="internat2.filles.organisation"></strong></p>
+            <h3 data-translate="illustrations">Illustration du secteur BTS</h3>
             <div class="carousel">
-                <div><img src="Images/couloir1.jpg" alt="Description 2"><p>Accès internat</p></div>
-                <div><img src="Images/couloir2.jpg" alt="Description 3"><p>Couloir</p></div>
-                <div><img src="Images/couloir3.jpg" alt="Description 4"><p>Couloir fond</p></div>
-                <div><img src="Images/bureau.jpg" alt="Description 1"><p>Bureau du surveillant</p></div>
-                <div><img src="Images/salon.jpg" alt="Description 5"><p>Salle de détente</p></div>
-                <div><img src="Images/douches.jpg" alt="Description 6"><p>Douches collectives</p></div>
-                <div><img src="Images/toilettes.jpg" alt="Description 7"><p>Toilettes individuels</p></div>
-                <div><img src="Images/chambre1.jpg" alt="Description 8"><p>Exemple de chambre</p></div>
-                <div><img src="Images/lavabo.jpg" alt="Description 9"><p>Lavabo dans les chambres</p></div>
+                <div id="illustration1"><img src="Images/couloir1.jpg" alt="Accès internat"><p data-translate="internat2.illustrations.0.alt"></p></div>
+                <div id="illustration2"><img src="Images/couloir2.jpg" alt="Couloir"><p data-translate="internat2.illustrations.1.alt"></p></div>
+                <div id="illustration3"><img src="Images/couloir3.jpg" alt="Couloir fond"><p data-translate="internat2.illustrations.2.alt"></p></div>
+                <div id="illustration4"><img src="Images/bureau.jpg" alt="Bureau du surveillant"><p data-translate="internat2.illustrations.3.alt"></p></div>
+                <div id="illustration5"><img src="Images/salon.jpg" alt="Salle de détente"><p data-translate="internat2.illustrations.4.alt"></p></div>
+                <div id="illustration6"><img src="Images/douches.jpg" alt="Douches collectives"><p data-translate="internat2.illustrations.5.alt"></p></div>
+                <div id="illustration7"><img src="Images/toilettes.jpg" alt="Toilettes individuels"><p data-translate="internat2.illustrations.6.alt"></p></div>
+                <div id="illustration8"><img src="Images/chambre1.jpg" alt="Exemple de chambre"><p data-translate="internat2.illustrations.7.alt"></p></div>
+                <div id="illustration9"><img src="Images/lavabo.jpg" alt="Lavabo dans les chambres"><p data-translate="internat2.illustrations.8.alt"></p></div>
             </div>
         </div>
     </div>
