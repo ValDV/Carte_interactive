@@ -1,6 +1,5 @@
 // stores the device context of the canvas we use to draw the outlines
 var convaContext;
-var translations = {};
 
 function byId(e) { return document.getElementById(e); }
 
@@ -88,13 +87,33 @@ function myInit() {
     convaContext.strokeStyle = 'red';
     convaContext.lineWidth = 2;
 
-    // Load translations
-    fetch('translations.json')
-        .then(response => response.json())
-        .then(data => {
-            translations = data;
-            changeLanguage('fr'); // Default language
-        });
+    // Set default language
+    changeLanguage('fr');
+
+    // Initialize Slick Carousel
+    $('.carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
 }
 
 function changeLanguage(lang) {
@@ -102,7 +121,17 @@ function changeLanguage(lang) {
     document.title = translations[lang].title;
     document.querySelectorAll('[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
-        element.textContent = translations[lang][key];
+        let translation = translations[lang];
+        key.split('.').forEach(part => {
+            translation = translation[part];
+        });
+        element.textContent = translation;
+    });
+
+    // Update area titles
+    document.querySelectorAll('map area').forEach(area => {
+        const key = area.getAttribute('alt').toLowerCase().replace(' ', '');
+        area.setAttribute('title', translations[lang][key].title);
     });
 }
 

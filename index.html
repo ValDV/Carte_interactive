@@ -9,6 +9,8 @@
     <meta name="description" content="Carte interactive de La Providence">
     <title>Plan interactif</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 </head>
 
 <body onload="myInit();">
@@ -17,7 +19,7 @@
     </div>
     <div id="section-map">
         <canvas id='myCanvas'></canvas>
-        <img alt="map" id="map" src="map.png" usemap="#image-map">
+        <img alt="map" id="map" src="Images/map.png" usemap="#image-map">
         <map name="image-map">
             <area onmouseover="myHover(this);" onmouseout="myLeave();" alt="Internat 1" title="Internat 1" href="javascript:void(0);" onclick="showModal('modal-internat1');" coords="610,43,518,44,519,132,543,132,542,68,611,66" shape="poly">
             <area onmouseover="myHover(this);" onmouseout="myLeave();" alt="Internat 2" title="Internat 2" href="javascript:void(0);" onclick="showModal('modal-internat2');" coords="384,160,519,130" shape="rect">
@@ -61,16 +63,30 @@
             <p><strong>Cantine matin :</strong> 6h45 à 7h45</p>
             <p><strong>Cantine soir :</strong> 19h00 à 20h00</p>
             <p><strong>Sorties autorisées :</strong> Jusqu'à 22h15</p>
-            <p><strong>Chambres :</strong> Chaque chambre est partagée par deux étudiants, avec une armoire et un bureau attribués à chaque personne</p>
-            <p><strong>Commodités :</strong> Un lavabo par chambre, ainsi que trois toilettes individuelles réparties dans le secteur</p>
-            <p><strong>Douches :</strong> Douches collectives</p>
-            <p><strong>Salle de repos :</strong> Équipée d'un canapé et d'une télévision</p>
+            <p><strong>Chambres :</strong> Chaque chambre est partagée par deux étudiants, avec une armoire et un bureau attribués à chaque personne.</p>
+            <p><strong>Commodités :</strong> Un lavabo par chambre, ainsi que trois toilettes individuelles réparties dans le secteur.</p>
+            <p><strong>Douches :</strong> Douches collectives disponibles.</p>
+            <p><strong>Salle de repos :</strong> Équipée d'un canapé et d'une télévision pour les moments de détente.</p>
             <h3>Au Troisième Étage : Secteur des Filles (Collège et Lycée)</h3>
-            <p><strong>Organisation :</strong> Fonctionnement similaire à celui du secteur des garçons</p>
+            <p><strong>Organisation :</strong> Fonctionnement similaire à celui du secteur des garçons, avec une gestion des espaces et des services adaptée aux besoins des filles.</p>
+            <h3>Illustration du secteur BTS</h3>
+            <div class="carousel">
+                <div><img src="Images/couloir1.jpg" alt="Description 2"><p>Accès internat</p></div>
+                <div><img src="Images/couloir2.jpg" alt="Description 3"><p>Couloir</p></div>
+                <div><img src="Images/couloir3.jpg" alt="Description 4"><p>Couloir fond</p></div>
+                <div><img src="Images/bureau.jpg" alt="Description 1"><p>Bureau du surveillant</p></div>
+                <div><img src="Images/salon.jpg" alt="Description 5"><p>Salle de détente</p></div>
+                <div><img src="Images/douches.jpg" alt="Description 6"><p>Douches collectives</p></div>
+                <div><img src="Images/toilettes.jpg" alt="Description 7"><p>Toilettes individuels</p></div>
+                <div><img src="Images/chambre1.jpg" alt="Description 8"><p>Exemple de chambre</p></div>
+                <div><img src="Images/lavabo.jpg" alt="Description 9"><p>Lavabo dans les chambres</p></div>
+            </div>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </body>
 
 </html>

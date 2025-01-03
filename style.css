@@ -156,3 +156,16 @@ body {
 .modal-content strong {
     color: #333;
 }
+
+/* Styles pour le carrousel */
+.carousel img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.carousel p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
