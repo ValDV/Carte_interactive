@@ -1,4 +1,5 @@
-body {
+/* Styles globaux pour le corps de la page */
+body { 
     background-color: #f0f0f0;
     height: 100%;
     width: 100%;
@@ -10,6 +11,7 @@ body {
     color: #333;
 }
 
+/* Style pour le header */
 #header {
     background-color: #0073e6;
     color: white;
@@ -19,6 +21,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Section contenant la carte */
 #section-map {
     display: flex;
     justify-content: center;
@@ -30,11 +33,13 @@ body {
     flex-grow: 1;
 }
 
+/* Style pour le canvas de la carte */
 #section-map canvas {
     pointer-events: none;
     position: absolute;
 }
 
+/* Style pour l'élément contenant la carte */
 #section-map #map {
     max-width: 80%;
     height: auto;
@@ -43,6 +48,7 @@ body {
     border-radius: 10px;
 }
 
+/* Style pour le sélecteur de langue */
 #language-selector {
     margin-top: 20px;
     background-color: white;
@@ -54,6 +60,7 @@ body {
     align-items: center;
 }
 
+/* Style pour les boutons du sélecteur de langue */
 #language-selector button {
     margin: 5px;
     padding: 5px 10px;
@@ -66,10 +73,12 @@ body {
     transition: background-color 0.3s;
 }
 
+/* Changement de couleur au survol des boutons */
 #language-selector button:hover {
     background-color: #005bb5;
 }
 
+/* Styles pour les écrans de petite taille (moins de 768px) */
 @media (max-width: 768px) {
     #header {
         padding: 10px;
@@ -91,10 +100,10 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+/* Contenu de la modale */
 .modal-content {
     background-color: white;
     margin: 20px auto;
@@ -111,6 +120,7 @@ body {
     overflow-y: auto;
 }
 
+/* Bouton de fermeture de la modale */
 .close {
     color: #aaa;
     float: right;
@@ -119,12 +129,14 @@ body {
     cursor: pointer;
 }
 
+/* Changement de couleur au survol ou au focus du bouton de fermeture */
 .close:hover,
 .close:focus {
     color: black;
     text-decoration: none;
 }
 
+/* Image dans la modale */
 .modal-image {
     max-width: 100%;
     height: auto;
@@ -132,7 +144,7 @@ body {
     border-radius: 5px;
 }
 
-/* Styles pour les titres et paragraphes dans les modales */
+/* Titres et paragraphes dans les modales */
 .modal-content h2 {
     color: #0073e6;
     border-bottom: 2px solid #0073e6;
@@ -156,17 +168,19 @@ body {
     font-weight: normal;
 }
 
+/* Texte en gras dans les modales */
 .modal-content strong {
     color: #333;
     font-weight: bold;
 }
 
-/* Styles pour le carrousel */
+/* Images dans le carrousel */
 .carousel img {
     height: 100%;
     border-radius: 5px;
 }
 
+/* Texte sous les images dans le carrousel */
 .carousel p {
     text-align: center;
     margin-top: 10px;
