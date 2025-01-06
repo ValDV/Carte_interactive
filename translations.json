@@ -32,7 +32,7 @@
         },
         "internat2": {
             "title": "Internat 2",
-            "description": "Au premier étage (au-dessus de la cantine) : garçons (collège et lycée).",
+            "description": "Au Deuxième Étage : Secteur des BTS",
             "bts": {
                 "cantine_matin": "Cantine matin : 6h45 à 7h45",
                 "cantine_soir": "Cantine soir : 19h00 à 20h00",
